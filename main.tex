@@ -1,0 +1,183 @@
+\documentclass[10pt,a4paper]{moderncv}
+% moderncv themes 
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+\usepackage[T1]{fontenc}
+% character encoding
+\usepackage[utf8x]{inputenc}                   % replace by the encoding you are using
+\usepackage[francais]{babel}
+\usepackage{fancyhdr}
+\usepackage[babel]{csquotes}
+\usepackage{multicol}
+% adjust the page margins
+\usepackage[scale=0.88,top=1cm,bottom=1cm]{geometry}
+\usepackage{setspace}
+\usepackage[absolute]{textpos}
+\recomputelengths                             % required when changes are made to page layout lengths
+\renewcommand*{\namefont}{\fontsize{25}{29}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{16}{25}\mdseries\upshape}
+
+\renewcommand{\cventrylogo}[9][.25em]{% 
+\cvitem[#1]{#2}{% 
+  {\bfseries#3}% 
+  \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% 
+  \ifthenelse{\equal{#5}{}}{}{, #5}% 
+  \ifthenelse{\equal{#6}{}}{}{, #6.}% 
+  \ifthenelse{\equal{#7}{}}{}{% 
+    \ifthenelse{\equal{#8}{}}{}{\hfill \raisebox{-0.3\height}{\includegraphics[width=#8]{#7}}}}%
+  \strut% 
+  \ifx&#9&% 
+    \else{\newline{}\begin{minipage}[t]{\linewidth}\small#9\end{minipage}}\fi} }
+
+\fancyfoot{} % clear all footer fields  
+\fancyfoot[LE,RO]{\thepage}           % page number in "outer" position of
+% footer line
+\fancyfoot[RE,LO]{\footnotesize } % other info in "inner" position of footer
+% line
+\definecolor{mycolor}{RGB}{89,178,75}
+\definecolor{mycolor2}{RGB}{75,75,75}
+\definecolor{mycolor3}{RGB}{75,75,75}
+
+
+
+% personal data
+\firstname{Nom}
+\familyname{Prenom}
+\title{\textcolor{gray1}{\large
+text, text ,text
+}}
+% optional, remove the line if not wanted
+\address{Adresse......}{Adresse......}    % optional, remove the line if not wanted
+\mobile{00 33 0 00 00 00 00}
+
+
+                  % optional, remove the line if not wanted
+% optional, remove the line if not wanted
+\definecolor{gray1}{rgb}{0.45,0.45,0.45}
+\email{mail@gmail.com}                      % optional,
+\extrainfo{XXans - Mobilité }
+
+                                % remove the line if not wanted
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+%\photo[84pt]{placeholder.jpg}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\photo[60pt]{empty.jpg}
+\definecolor{blue1}{rgb}{0.22,0.45,0.70}
+\let\originalrecomputecvlengths\recomputecvlengths
+\renewcommand*{\recomputecvlengths}{%
+	\originalrecomputecvlengths%
+	\setlength{\quotewidth}{0.8\textwidth}}
+\quote{\color{blue1}\textbf{Développeur Polyvalant}} \renewcommand*{\quotefont}{\fontsize{9.5}{22}}
+
+
+\nopagenumbers{}                              % uncomment to suppress automatic page numbering for CVs longer than one page
+\thispagestyle{empty}
+
+ 
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+%Section
+\section{Expérience Professionnelle}
+\vspace*{0.5\baselineskip}
+
+\cventrylogo{Avril 2018 - en cours}{Consultant XXXXX}{}{}{}{microsoft-80658_960_720.jpg}{15mm}{\vspace*{0.1\baselineskip} \newline
+	- Participation au .............
+	\newline - Environnement Technique :  \textbf{Tibco businessworks 6.3.5}, ..............} \vspace*{0.5\baselineskip}
+
+\cventrylogo{Août 2015 - mars 2018}{Consultant Java.......}{}{}{}{microsoft-80658_960_720.jpg}{15mm}{\vspace*{0.1\baselineskip} \newline
+	- Participation à la ..............
+	\newline - Environnement Technique : \textbf{Tibco businessevents 5.2.0}................} \vspace*{0.5\baselineskip}
+	
+\cventrylogo{Février - Juillet 2015}{Projet de Fin d’Études - \textit{Company}}{}{}{}{microsoft-80658_960_720.jpg}{15mm}{\vspace*{0.1\baselineskip} \newline
+	- Participation au..................\newline
+	- Environnement Technique: JAVA SE 7,.........
+GIT.}
+\vspace*{0.2\baselineskip} 
+\section{Formation}
+\vspace*{0.2\baselineskip}
+\cvline{2013 - 2015}{\textbf{Master Spécialisé ..........}, Ecole Normale ...........Maroc, (2 ans), Mention : Assez Bien, }
+\vspace*{0.3\baselineskip}
+\cvline{2013}{\textbf{Licence Fondamentale en Sciences Mathématiques et Informatique Option : Génie Logiciel}, Faculté des Sciences RABAT, (3 ans).}
+\vspace*{0.1\baselineskip}
+
+\section{Connaissances informatique}
+\vspace*{0.1\baselineskip}
+\setlength{\columnsep}{2cm}
+
+\begin{multicols}{2}
+\setlength{\fboxsep}{0pt}
+\mbox{\parbox{\textwidth}{
+ \textbf{Back-end} : JAVA EE 6/7: Web - JPA - EJB - JMS\newline - SOAP(Jax-WS) - RESTfull(Jax-RS) - JaxB. Spring.}}
+\vspace*{0.3\baselineskip}
+
+\mbox{\parbox{\textwidth}{  \textbf{ESB/EAI/CEP} : Tibco : BusinessWorks 5/6, Businessevents 5\newline Activespaces 2, bwpm, administrator, Ems, Gems. }}
+ \vspace*{0.3\baselineskip}
+ 
+ \mbox{\parbox{\textwidth}{ \textbf{Front-end} : Java SE, CSS/HTML, Javascript, AngularJs. \newline}}
+
+ 
+ \mbox{\parbox{\textwidth}{\textbf{SGBD} : MySql, Oracle, Objectdb, MongoDB.}}
+ \vspace*{0.3\baselineskip}
+ 
+\mbox{\parbox{\textwidth}{\textbf{ALM} : Uml,
+Extreme programming, Maven, GIT,\newline SVN, go.cd.
+Scrum.}} \vspace*{0.3\baselineskip}
+
+\mbox{\parbox{\textwidth}{\textbf{Automatisation} : Maven failsafe, Maven surefire,\newline selenium, arquillian.}} \vspace*{0.3\baselineskip}
+
+\mbox{\parbox{\textwidth}{\textbf{Middleware} : Tibco EMS, IBM MQ, RMI,\newline Axway CFT Transfer, Activemq.}} \vspace*{0.3\baselineskip}
+
+\end{multicols}
+\section{Formations professionnelles et Certifications}
+\vspace*{0.3\baselineskip}
+\cvline{Formation}{Developing Applications with TIBCO ActiveMatrix BusinessWorks™ 6.x.} \vspace*{0.2\baselineskip}
+\cvline{Formation}{Administration of TIBCO BusinessEvents® 5.x CEP Solutions} \vspace*{0.2\baselineskip}
+\cvline{Certification}{M101J: MongoDB for Java Developers(MOOC), OCAJP8 : en cours de préparation.} \vspace*{0.2\baselineskip}
+
+\section{Projets personnels}
+
+\setlength{\columnsep}{2cm}
+
+\begin{multicols}{2}
+\mbox{\parbox{\textwidth}{\textbf{Gestion d’Absence, Github  \url{goo.gl/174PAu}, 2015}
+\begin{itemize}
+  \item \color{mycolor2} jboss 7, jsf/primefaces/omnifaces, CDI, Bean\newline Validation, joda time, arquillian, maven, Selenium.
+\end{itemize} }}
+\vspace*{0.3\baselineskip}
+
+\mbox{\parbox{\textwidth}{\textbf{Crud de cluster businessEvents, en cours 50\%}\begin{itemize}
+  \item \color{mycolor2} Angularjs, Html, Css, OpenAPI, TIBCO BE
+\end{itemize} }}
+\vspace*{0.3\baselineskip}
+\mbox{\parbox{\textwidth}{\textbf{Water Level Indicator - IOT}\begin{itemize}
+  \item \url{goo.gl/m3b47r}
+\end{itemize} }}
+
+\vspace*{0.3\baselineskip}
+\mbox{\parbox{\textwidth}{\textbf{Implémentation du principe MVC 2 en PHP}\begin{itemize}
+  \item \url{goo.gl/Lsc7Hj}
+\end{itemize} }}
+
+\end{multicols}
+
+\setlength{\columnsep}{1cm}
+
+\begin{multicols}{2}
+  \section{Centre d’Intérêts}
+  \vspace*{0.3\baselineskip}
+
+\cvline{}{Lecture, Billard.}
+
+  \section{Langues}
+  \vspace*{0.3\baselineskip}
+
+\cvline{}{\textbf{Français} : Courant, \textbf{Anglais} : Moyen, \newline
+\textbf{Arabe} : Maternelle, \newline \textbf{Anglais technique} : Tres Bien.  } 
+\end{multicols}
+
+\end{document}
+
